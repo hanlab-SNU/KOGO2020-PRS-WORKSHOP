@@ -53,20 +53,15 @@ Data
 
 `$ git clone https://github.com/hanlab-SNU/KOGO2020-PRS-WORKSHOP.git`
 
-`./data/` 폴더 내 세 개의 zip 파일을 unzip 시켜 주시기 바랍니다. (메일을 통해 전달된 pdf내 비밀번호 참고)  
-input zip을 두 개로 나눈 이유는 git에 100Mb이상 올리려면 git-lfs라는 추가 패키지 설치가 필요하므로 번거로움을 방지하고자 나누었습니다.  
-양해 부탁드립니다.  
+`./data/` 폴더 내 두 개의 zip 파일을 unzip 시켜 주시기 바랍니다. (메일을 통해 전달된 pdf내 비밀번호 참고)  
 
-`PRS_example_input1.zip` 내 파일들
+`PRS_example.zip` 내 파일들
  ```
  # 파일 포맷 설명
  * .bfile (.bed/.bim/.fam) : PLINK binary input fileset (N=200)
- ```
+ * .assoc : CAD(Coronary artery disease) GWAS summary statistic file
 
-`PRS_example_input2.zip` 내 파일들
- ```
- * .assoc : CAD(Crohn's Disease) GWAS summary statistic file
- * .log : PLINK log 파일
+* .log : PLINK log 파일
  * range_list : threshold range
  * SNP.pvalue : assoc 결과에서 SNP과 p.value만 뽑은 파일
  * .valid.snp : clumping된 결과(.clumped)에서 나온 3번째 column(SNP) 파일
@@ -89,8 +84,8 @@ Instruction
  $ plink \
     --bfile PRS_example \
     --clump-p1 1 --clump-r2 0.1 --clump-kb 250 \
-    --clump Howson.CAD.assoc --clump-snp-field SNP \
-    --clump-field P --allow-no-sex \
+    --clump Howson.CAD.assoc --clump-snp-field rsid \
+    --clump-field p --allow-no-sex \
     ––out PRS_example
  ```
 
