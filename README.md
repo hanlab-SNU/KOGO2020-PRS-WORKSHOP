@@ -12,7 +12,7 @@ Installation
 환경변수를 추가하면 cmd(명령 프롬프트)나 terminal에서 어느 위치에서나 `. /절대경로/plink(.exe)` 대신 `plink` 만으로 실행이 가능합니다.
 
 
- * Windows : 제어판 > 고급 시스템 설정 > 환경 변수 > 시스템 변수 > 편집 또는 새로 만들기 > 설치된 `PLINK`의 PATH 추가
+ * Windows : 제어판 > 고급 시스템 설정 > 환경 변수 > 시스템 변수 > 변수 'Path' 더블클릭 > 새로 만들기 > 설치된 `PLINK`의 PATH 추가
  * Mac / Linux : `.bashrc`/`.bash_profile` 설정 변경;
                  mac중 기본 shell을 zsh로 사용하는 분들은 (OS X Catalina) `.zshrc` 설정 변경
  
